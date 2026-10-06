@@ -11,10 +11,19 @@ class OrderHistory {
 
     public:
     OrderHistory();
-    Order insert(Order order);
-    int removeByNumber(int number);
-    int search(int number);
+
+    bool insertEnd(const Order& order);
+    bool insertFirst(const Order& order);
+
+    Order * consultFirst();
+    Order * consultLast();
+
+    Order * searchByNumber(const int number);
+    bool removeByValue(const int number);
+    
     void printHistory();
+
+    ~OrderHistory();
 };
 
 #endif
