@@ -13,15 +13,17 @@ class OrderHistory {
     OrderHistory();
 
     bool insertEnd(const Order& order);
-    bool insertFirst(const Order& order);
+    bool insertFront(const Order& order);
+    bool insertAt(const Order& order, const int position);
 
-    Order * consultFirst();
-    Order * consultLast();
 
-    Order * searchByNumber(const int number);
-    bool removeByValue(const int number);
+    Order * consultFirst() const;
+    Order * consultLast() const;
+
+    Order * searchByNumber(const int number) const;
+    bool removeOrder(const int number);
     
-    void printHistory();
+    void printHistory() const;
 
     ~OrderHistory();
 };
