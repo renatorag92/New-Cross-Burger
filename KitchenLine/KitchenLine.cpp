@@ -9,9 +9,7 @@ KitchenLine::KitchenLine() {
 }
 
 bool KitchenLine::isEmpty() {
-    if (this->front == nullptr) {
-        return;
-    }
+    return this->front == nullptr;
 }
 
 bool KitchenLine::enqueue(const Order& order) {

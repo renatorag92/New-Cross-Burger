@@ -12,8 +12,8 @@ class UndoStack {
     public:
     UndoStack();
 
-    std::string push() const;
-    void pop() const;
+    bool push(const std::string& action);
+    bool pop();
     bool isEmpty() const;
     std::string consultTop() const;
 
